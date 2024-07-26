@@ -22,5 +22,6 @@ class archivo:
             archivoTexto.close()
 
     # def descerializar(self,json):
+        hola
         
     
