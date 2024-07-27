@@ -1,3 +1,4 @@
+import json
 class archivo:
     def __init__(self):
         self.archivo = None
@@ -21,7 +22,7 @@ class archivo:
             archivoTexto.write(datoAux_texto)
             archivoTexto.close()
 
-    # def descerializar(self,json):
-        hola
-        
-    
+    def descerializar(self,datoArchivo):
+        objDescerializar=json.loads(datoArchivo)
+        print("Longitud: ",len(datoArchivo))
+        return objDescerializar
