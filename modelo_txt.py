@@ -1,28 +1,20 @@
 import json
 class archivo:
     def __init__(self):
-        self.archivo = None
+        self.texto = None
 
-    def get_archivo(self):
-        return self.archivo
+    def guardarTexto(self,dato_texto):
+        self.texto=dato_texto
+        return self.texto
     
-    def set_archivo(self,datoArchivo):
-        self.archivo = datoArchivo
-        return self.archivo
-
-    def guardarTexto(self,datoTexto):
-        auxtexto=datoTexto
-        return auxtexto
-    
-    def crearArchivo(self,datoNombre,datoAux_texto):
-        nombreArchivo=datoNombre
+    def crearArchivo(self,dato_texto,nombreArchivo):
         nombreArchivo=nombreArchivo+".txt"
         with open(nombreArchivo,"w") as archivoTexto:
-            #escriba una cadena de texto en su archivo
-            archivoTexto.write(datoAux_texto)
-            archivoTexto.close()
-
-    def descerializar(self,datoArchivo):
-        objDescerializar=json.loads(datoArchivo)
-        print("Longitud: ",len(datoArchivo))
-        return objDescerializar
+            json.dump(dato_texto,archivoTexto)
+            
+            
+    def deserializar(self, nombreArchivo):
+        nombreArchivo=nombreArchivo+".txt"
+        with open(nombreArchivo,"r")as archivoTexto:
+            dato_texto=json.load(archivoTexto)
+            return dato_texto
