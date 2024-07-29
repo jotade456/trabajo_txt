@@ -1,4 +1,4 @@
-from vistaa import Vista
+from vista_txt import Vista
 from modelo_txt import archivo
 class controlador:
     def __init__(self):
