@@ -6,10 +6,10 @@ class Vista:
         self.ventana = Ventana.Tk()
         self.ventana.title("Crear Archivo")
         self.ventana.geometry("380x250")
-        self.ventana.configure(bg="#f0f0f0")
+        self.ventana.configure(bg="purple")
         self.objControlador=controlador
 
-        self.label_style = {"bg": "#f0f0f0"}
+        self.label_style = {"bg": "lightblue"}
         self.entry_style = {"font": "Helvetica"}
 
         
